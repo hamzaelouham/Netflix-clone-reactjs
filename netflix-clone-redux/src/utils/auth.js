@@ -1,8 +1,20 @@
 import firebase from "firebase";
 
-const config = {};
+const firebaseConfig = {
+  apiKey: "AIzaSyA2_PwbK5ZJjN7VLchf0QI3WU4-ZmPHXME",
 
-const firebaseApp = firebase.initializeApp(config);
+  authDomain: "netflix-clone-egaledeve.firebaseapp.com",
+
+  projectId: "netflix-clone-egaledeve",
+
+  storageBucket: "netflix-clone-egaledeve.appspot.com",
+
+  messagingSenderId: "542221349233",
+
+  appId: "1:542221349233:web:fcd15e2021d198329846d0",
+};
+
+//const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 //const database = firebaseApp.firestore();
 
