@@ -27,7 +27,7 @@ function Singin() {
     e.preventDefault();
 
     auth
-      .singInWithEmailAndPassword(email.current.value, password.current.value)
+      .signInWithEmailAndPassword(email.current.value, password.current.value)
       .then((user) => {
         console.log(user);
       })
@@ -41,13 +41,13 @@ function Singin() {
     <div className="signin">
       <form>
         <h1>Sign in</h1>
-        {error
+        {/* {error
           ? error.map((e, i) => (
               <p className="error" key={i}>
                 {e}
               </p>
             ))
-          : ""}
+          : ""} */}
         <p></p>
         <input ref={email} type="email" placeholder="Email" />
         <input ref={password} type="password" placeholder="Password" />
