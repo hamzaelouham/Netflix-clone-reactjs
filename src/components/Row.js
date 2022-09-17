@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import request from "../utils/axios";
 import { image_url } from "../utils/api";
+import { useQuery } from "react-query";
 
 function Row({ title, url, isLarge = false }) {
-  const [movies, setMovies] = useState([]);
+  const getMovies = async () => {
+    const { data } = await request.get(url);
+    return data.results;
+  };
 
-  useEffect(() => {
-    const getMovies = async () => {
-      const { data } = await request.get(url);
+  const { data: movies, isLoading } = useQuery([`movies-${title}`], () =>
+    getMovies()
+  );
 
-      setMovies(data.results);
-    };
-
-    getMovies();
-  }, [url]);
+  if (isLoading) return <h4>loading ...</h4>;
 
   return (
     <div className="row">
