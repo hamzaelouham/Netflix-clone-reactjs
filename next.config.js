@@ -6,7 +6,7 @@ const nextConfig = {
       "https://api.themoviedb.org/",
     ],
   },
-    distDir: 'build',
+
 };
 
 module.exports = nextConfig;
