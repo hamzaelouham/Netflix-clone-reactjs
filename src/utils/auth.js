@@ -1,17 +1,17 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA2_PwbK5ZJjN7VLchf0QI3WU4-ZmPHXME",
+  apiKey: "",
 
-  authDomain: "netflix-clone-egaledeve.firebaseapp.com",
+  authDomain: "",
 
   projectId: "netflix-clone-egaledeve",
 
-  storageBucket: "netflix-clone-egaledeve.appspot.com",
+  storageBucket: "",
 
-  messagingSenderId: "542221349233",
+  messagingSenderId: "",
 
-  appId: "1:542221349233:web:fcd15e2021d198329846d0",
+  appId: "",
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
